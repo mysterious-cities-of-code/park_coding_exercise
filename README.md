@@ -17,7 +17,7 @@ Parsing of data and data structure population - a simplistic parse of the file b
 
 Data structures - 
 
-1. Uses of a simple structure (graph) to map the places, their type and their adjacency lists. In production code we may wish to make use of an adjacency matrix instead of lists to aid analysis. We would probably also lean on better suited libs than hand-rolling this (numpy/scipy etc.)
+1. Uses a simple structure (graph) to map the places, their type and their adjacency lists. In production code we may wish to make use of an adjacency matrix instead of lists to aid analysis. We would probably also lean on better suited libs than hand-rolling this (numpy/scipy etc.)
 
 2. Uses a simple structure (historical_routes) to maintain a tally of the routes as processed from the file. In production code we may also wish to maintain most recent or other ordering, and we would probably also want to store the original data in a lossless repository somewhere. 
 
@@ -30,5 +30,5 @@ Data structures -
 Recommendation strategy - a single noddy strategy is provided (suggest_most_popular_places) - which takes a parameter for the number of suggestions to return, and looks at the most popular places based solely on ‘place_total’ (which places occur most frequently in past routes). In production code, we might want to apply algorithms like ‘Floyd–Warshall’ and related, with a range of different strategies that consider arc weight, place type, place popularity, and the various combinations of those.
 
 
-Testing - a couple of tests are provided, but obviously production code would have a fuller more comprehensive test suite.
+Testing - obviously production code would have a fuller more comprehensive test suite.
 
